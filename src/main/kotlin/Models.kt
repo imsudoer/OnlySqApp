@@ -46,7 +46,7 @@ object Storage {
             if (file.exists()) {
                 jsonWorker.decodeFromString<AppState>(file.readText())
             } else AppState()
-        } catch (e: Exception) {
+        } catch (_: Exception) {
             AppState()
         }
     }

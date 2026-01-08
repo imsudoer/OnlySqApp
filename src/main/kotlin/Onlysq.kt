@@ -1,4 +1,3 @@
-import androidx.compose.runtime.remember
 import io.ktor.client.HttpClient
 import io.ktor.client.engine.cio.CIO
 import io.ktor.client.plugins.contentnegotiation.ContentNegotiation
@@ -108,7 +107,7 @@ suspend fun callAIStream(postbox: JsonObject, apikey: String, onDelta: (String) 
                             .jsonObject["error"]
                             ?.jsonObject?.get("message")
                             ?.jsonPrimitive?.content
-                    } catch (e: Exception) {
+                    } catch (_: Exception) {
                         throw IllegalStateException("Unauthorized: Invalid API Key")
                     }
 
