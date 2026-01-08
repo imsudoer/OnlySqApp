@@ -1,4 +1,4 @@
-rootProject.name = "mediacontrol"
+rootProject.name = "onlysqapp"
 pluginManagement {
     repositories {
         google()
